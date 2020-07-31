@@ -13,6 +13,8 @@ class ErroColor:
     FIM = '\033[0m'
     OK = '\033[1;92m'
 
+contador = 0
+
 try:
     ID_CLIENT = argv[1]
     ID_MODULOS = argv[2:]
@@ -42,6 +44,11 @@ while True:
 
     except:
         print(ErroColor.ERRO + 'Erro ao carregar a pagina, tentando novamente.' + ErroColor.FIM)
+# Iniciando contador.
+    contador += 1
+    print(f'Checkagem Nº{contador}')
+    print('')
+    print('='*50)
     for ID_MODULO in ID_MODULOS:
         if ID_MODULO in mirror_primario.text:
             print(f'O modulo {ID_MODULO} está' + ErroColor.OK +
@@ -53,3 +60,4 @@ while True:
             print(f'O modulo {ID_MODULO} parece estar' +
                   ErroColor.ERRO + ' Offline.' + ErroColor.FIM)
         sleep(5)
+    print('')
