@@ -3,6 +3,7 @@ from sys import exit
 from time import sleep
 from requests import get
 
+# Versão 1.1
 
 # Cores para a mensagem de erro.
 class ErroColor:
