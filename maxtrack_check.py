@@ -46,7 +46,7 @@ while True:
         print(ErroColor.ERRO + 'Erro ao carregar a pagina, tentando novamente.' + ErroColor.FIM)
 # Iniciando contador.
     contador += 1
-    print(f'Checkagem Nº{contador}')
+    print(f'Verificação Nº{contador}')
     print('')
     print('='*50)
     for ID_MODULO in ID_MODULOS:
